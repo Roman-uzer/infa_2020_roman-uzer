@@ -85,7 +85,7 @@ elif platform == "linux":
     VK_RETURN = 0x24  # RETURN key
     VK_ESCAPE = 0x09  # ESC key
 
-DEF_GRAPH_WIDTH = 500
+DEF_GRAPH_WIDTH = 600
 DEF_GRAPH_HEIGHT = 600
 NW = tkinter.NW
 N = tkinter.N
