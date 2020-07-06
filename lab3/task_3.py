@@ -1,5 +1,7 @@
 from graph import*
 
+windowSize(600,402)
+canvasSize(600,402)
 penColor(162,245,255)
 brushColor(162,245,255)
 rectangle(0,0,600,186)
@@ -47,6 +49,7 @@ for i in range(3):
 brushColor(0,0,0)
 penColor(0,0,0)
 rectangle(405,210,410,110)
+
 def triangle(x,y,z):
 	penColor(150,150,150)
 	brushColor(223,214,154)
@@ -66,18 +69,19 @@ brushColor("white")
 circle(514,220,6)
 penColor(220,79,100)
 brushColor(187,79,1)
-arc = []
+
 x0 = 350
-y0 = 240
-ye = 240
+y0 = 210
+arcs = [(x0,y0)]
 x = 0
-h = 0.1
-while ye >= 210:
-	y = (900 - x*2)**(1/2)
-	xe = x0 - x*50
-	ye = y0 - y*50
+while x <= 30:
+	y = (900 - x**2)**(1/2)
+	xe = x0 - x
+	ye = y0 + y
 	point(xe,ye)
-	arc.append([xe,ye])
-	x += h
+	arcs.append((xe,ye))
+	x += 1
+arcs.append((x0,y0))
+polygon(arcs)
 
 run()
