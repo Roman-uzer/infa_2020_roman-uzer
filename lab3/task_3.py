@@ -95,6 +95,7 @@ umbrella(90, 230, 96, 260, 70)
 umbrella(203, 270, 204, 290, 25)
 #корабль
 def ship(x1, y1, x2, y2):
+
 	h = y2 - y1
 	brushColor(0,0,0)
 	penColor(0,0,0)
